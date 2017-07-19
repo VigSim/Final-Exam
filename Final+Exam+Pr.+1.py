@@ -20,7 +20,8 @@ for i in range(0, len(cardsData)):
 
     cardInfo = {"name":cardsData[i].find("h4").text, "url" :cardsData[i].find("h4").find("a", href=True)['href'], sum:cardsData[i].find("p", attrs={"class":"card_sum"}).text}
     resultData.append(cardInfo)
-
+with open("Cards.json","w") as file:
+    my_file=cardInfo.load(file)
 
 # In[ ]:
 
